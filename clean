@@ -1,1 +1,11 @@
-rm -rf *.bcf *.aux *.dvi *.log *.pdf *.xml *.toc *.out *.blg *.gz *.bbl
+rm -rf *.pdf sections/*.pdf
+rm -rf *.bcf sections/*.bcf
+rm -rf *.aux sections/*.aux
+rm -rf *.dvi sections/*.dvi
+rm -rf *.log sections/*.log
+rm -rf *.xml sections/*.xml
+rm -rf *.toc sections/*.toc
+rm -rf *.out sections/*.out
+rm -rf *.blg sections/*.blg
+rm -rf *.bbl sections/*.bbl
+rm -rf *.gz  sections/*.gz

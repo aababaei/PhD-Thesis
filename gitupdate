@@ -1,5 +1,5 @@
-git add thesis.tex thesis.pdf references.bib preamble.sty bibstyle.bst gitupdate clean
-git add	sections/*.tex sections/bibstyle.bst sections/references.bib sections/clean
+git add thesis.tex thesis.pdf references.bib preamble.sty bibstyle.bst gitupdate make clean
+git add	sections/*.tex sections/bibstyle.bst sections/references.bib
 git add	figs/*.pdf figs/*/*.pdf figs/*/*.png figs/*/*/*.pdf figs/*/*/*.png
 git commit -m 'updated!'
 git push origin main
