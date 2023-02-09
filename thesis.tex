@@ -1,0 +1,26 @@
+\documentclass[a4paper,12pt,twoside]{article}
+% Using an article class to have Figure
+% numbers without section counters. 
+% The \label tags MUST be placed inside or
+% after \caption tags for this to work.
+
+\usepackage{preamble}
+
+\begin{document}
+
+\subfile{sections/title-page}
+\subfile{sections/abstract}
+\subfile{sections/acknowledgments}
+\subfile{sections/preface}
+\tableofcontents \newpage
+\subfile{sections/introduction}
+\subfile{sections/methodology}
+\subfile{sections/lubrication}
+\subfile{sections/performance}
+\subfile{sections/2way-coupling}
+\subfile{sections/collision-efficiency}
+\subfile{sections/conclusions}
+\subfile{sections/appendices}
+\subfile{sections/references}
+
+\end{document}

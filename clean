@@ -1,0 +1,1 @@
+rm -rf *.bcf *.aux *.dvi *.log *.pdf *.xml *.toc *.out *.blg *.gz *.bbl
