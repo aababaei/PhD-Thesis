@@ -17,18 +17,18 @@ The influence of considering lubrication forces in the AI of droplets will be di
 \begin{table}[!b]%---------- T A B L E ----------
 \center
   \begin{tabular}{ccccccc}
-  \hline\hline
+  \hline
   $N$ & $\Delta t$ & $\nu$ & $\tau_\text{K}$ & $\eta_\text{K}$ & $T_e$ & $L_f$\\
   64 & 0.0042 & 0.0067 & 0.19 & 0.0036 & 3.86 & 1.62\\\hline
   $\epsilon$ & $u'$ & $R_{\lambda}$ & \textit{CFL} & $k_\text{max}\eta_\text{K}$ & $\mathcal{S}$ & $\mathcal{F}$\\
-  0.18 & 0.82 & 76.86 & 0.23 & 1.1 & -0.42 & 4.51\\
-  \hline\hline
+  0.18 & 0.82 & 76.86 & 0.23 & 1.1 & --0.42 & 4.51\\
+  \hline
   \end{tabular}
   \caption{Input parameter settings and average flow statistics in spectral units.}
   \label{tab:1}
 \end{table}%------------------------------------
 
-To examine lubrication effects, the computational grids are limited to $64^3$ nodes since the main focus is on the effect of aerodynamic interaction rather than the Reynolds number. The same flow field has been used in all the simulations in this subsection (\ref{sec:lub}). Before adding the particles to the domain, the flow field has evolved so as to reach a statistically stationary stage where the averages in flow statistics remain constant. The basic parameters and time-averaged statistics of the flow are listed in Table \ref{tab:1}, in which $N$ is the number of grid points---resolution---in each spatial direction, $\Delta t$ is the spectral time step chosen to evolve the flow, $\nu$ is the kinematic viscosity of the turbulent air given in spectral units, $\tau_\text{K}$ and $\eta_\text{K}$ are the Kolmogorov time and length scales, $T_e$ is the large-eddy turnover time, $L_f$ is the integral length scale, $\epsilon$ is the dissipation rate of turbulent kinetic energy, $u'$ is the r.m.s.\ of the fluctuations in velocity, $R_\lambda$ is the Taylor-microscale flow Reynolds number, \textit{CFL} is the Courant--Friedrichs--Lewy number, and $k_\text{max}\eta_\text{K}$ is the commonly defined resolution parameter which must be larger than unity. Furthermore, $\mathcal{S}$ and $\mathcal{F}$ are the skewness and flatness of longitudinal velocity gradient.
+To examine lubrication effects, the computational grids are limited to $64^3$ nodes since the main focus is on the effect of aerodynamic interaction rather than the Reynolds number. The same flow field has been used in all the simulations in this subsection (\ref{sec:lub}). Before adding the particles to the domain, the flow field has evolved so as to reach a statistically stationary stage where the averages in flow statistics remain constant. To do so, the 3D velocity fields were initialized as random number arrays drawn using a standard random number generator with a Gaussian distribution. After a sufficiently long integration time, the velocity fields develop features of homogeneous and isotropic turbulence. The basic parameters and time-averaged statistics of the flow are listed in Table \ref{tab:1}, in which $N$ is the number of grid points---resolution---in each spatial direction, $\Delta t$ is the spectral time step chosen to evolve the flow, $\nu$ is the kinematic viscosity of the turbulent air given in spectral units, $\tau_\text{K}$ and $\eta_\text{K}$ are the Kolmogorov time and length scales, $T_e$ is the large-eddy turnover time, $L_f$ is the integral length scale, $\epsilon$ is the dissipation rate of turbulent kinetic energy, $u'$ is the r.m.s.\ of the fluctuations in velocity, $R_\lambda$ is the Taylor-microscale flow Reynolds number, \textit{CFL} is the Courant--Friedrichs--Lewy number, and $k_\text{max}\eta_\text{K}$ is the commonly defined resolution parameter which must be larger than unity. Furthermore, $\mathcal{S}$ and $\mathcal{F}$ are the skewness and flatness of longitudinal velocity gradient.
 
 
 
