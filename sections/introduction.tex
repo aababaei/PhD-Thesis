@@ -36,6 +36,17 @@ Aerodynamic interaction among the particles can be accounted for via ``superposi
 
 The physics of this model has already been investigated \cite{ARPW21}, but a quantitative evaluation of the computational aspects remains to be addressed. Furthermore, it has been shown that without lubrication effects simulation time increases with the number of droplets in the domain \cite{APCRW14}, but it is expected that considering lubrication reduces this time. This is because for the particles in proximity short-range interaction is considered, thereby excluding such pairs from the matrix of disturbances for AI. As a result, a smaller matrix needs to be inverted which is less demanding. In addition, the size of the distance below (over) which the lubrication effect (superposed disturbances) would be considered is another key factor affecting computation time. Moreover, it is important to address the scalability of this implementation with the number of CPU cores. Additionally, we want to check the feasibility and evaluate the cost of simulations with higher resolution meshes and larger liquid water contents (LWC). The aim of this study is to assess all these aspects of the model by making use of data from numerical simulations.
 
+
+\begin{figure}
+\center
+\includegraphics[trim=27mm 20mm 25mm 21mm, clip, width=0.49\textwidth]{../figs/Pref-conc/St = 0.1.pdf}
+\includegraphics[trim=27mm 20mm 25mm 21mm, clip, width=0.49\textwidth]{../figs/Pref-conc/St = 0.25.pdf}
+\includegraphics[trim=27mm 20mm 25mm 21mm, clip, width=0.49\textwidth]{../figs/Pref-conc/St = 1.pdf}
+\includegraphics[trim=27mm 20mm 25mm 21mm, clip, width=0.49\textwidth]{../figs/Pref-conc/St = 4.pdf}
+\caption{Preferential concentration}
+\label{fig:pref}
+\end{figure}
+
 %\bibliographystyle{bibstyle}
 %\bibliography{references}
 \newpage

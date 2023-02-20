@@ -6,27 +6,79 @@
 \renewcommand{\arraystretch}{1.25}
 \section{Appendices}
 
+\subsection{Bispherical coordinates system}
+\begin{figure}[b!]
+\center
+\includegraphics[trim=15mm 05mm 15mm 60mm, clip, width=0.7\textwidth]{./figs/bispherical.pdf}
+\caption{Geometrical parameters for two spheres in bispherical coordinates}
+\label{fig:bispherical}
+\end{figure}
+In Figure~\ref{fig:bispherical}, for an arbitrarily located point $P(\eta,\theta)$ the bispherical coordinates are $\eta\equiv\ln(d_2/d_1)$ and $\theta$ being the angle $P$ makes with the two focal points at $\pm c$ where
+\begin{eqnarray}
+c = \frac{1}{2r}\sqrt{[r^2-(a_1+a_2)^2][r^2-(a_1-a_2)^2]}.\nonumber
+\end{eqnarray}
+The rest of the parameters displayed in Figure~\ref{fig:bispherical} describe a distinct setting for two arbitrary spheres $\eta_1$ and $\eta_2$ whose relation with the given geometrical parameters are as follows:
+\begin{align}
+\sinh\eta_1 &= \frac{c}{a_1}, \qquad
+\coth\eta_1 = \frac{r_1}{c}, \nonumber
+\\
+\sinh-\eta_2 &= \frac{c}{a_2}, \; \quad
+\coth-\eta_2 = \frac{r_2}{c}, \nonumber
+\\
+\cosh\eta_1 &= \frac{r_1}{a_1} = 1 + \epsilon\frac{\lambda+\frac{\epsilon}{2}}{1+\lambda+\epsilon}, \label{eq:zin1}
+\\
+\cosh-\eta_2 &= \frac{r_2}{a_2} = 1 + \frac{\epsilon}{\lambda}\frac{1 + \frac{\epsilon}{2}}{1+\lambda+\epsilon}, \label{eq:zin2}
+\end{align}
+where the normalized clearance, radius ratio, and separation distance, respectively, are:
+\begin{align}
+\epsilon &= \frac{h}{a_1} = \xi\frac{1+\lambda}{2}, \nonumber
+\\
+\lambda &= \frac{a_2}{a_1} = \frac{\sinh\eta_1}{\sinh-\eta_2}, \label{eq:lam}
+\\
+r &= c(\coth\eta_1+\coth-\eta_2) \nonumber \\ 
+  &= a_1\cosh\eta_1+a_2\cosh\eta_2 \label{eq:sep} \\ 
+  &= a_1(1+\lambda+\epsilon).  \nonumber
+\end{align}
+For a specific two-sphere setting ($r,\lambda$), the system of Equations~(\ref{eq:lam}, \ref{eq:sep}) needs to be iteratively solved to find $(\eta_1,\eta_2)$ (see Appendix B1 of \cite{GMS20}). A better alternative is to employ explicit \cite{Z80} transforms given in (\ref{eq:zin1}, \ref{eq:zin2}). Note that due to our problem setting $\eta_2<0$, while all the rest of the geometrical and bispherical parameters are positive. Also note that $(\alpha,\beta)=(\xi_1,\xi_2)=(\eta_1,\eta_2)$ in Table~\ref{tab:misprints}. See Section IV of \cite{MS12} for more details regarding bispherical coordinates.
+
+
+
 \subsection{Exact solutions in bispherical coordinates\label{sec:bi}}
-The bispherical coordinate system has been used to solve various physical problems such as interaction of a sphere with infinite rigid or free flat surfaces \cite{B61}, interaction between two internal eccentric spheres as in a spherical journal bearing \cite{J15}, or elastic media having two spherical cavities \cite{SS52}. Here, we review relevant studies on analytical solutions for two spherical particles, both rigid and liquid, interacting through an unbounded, quiescent, viscous fluid.
+The bispherical coordinate system has been used to solve various physical problems such as interaction of a sphere with infinite rigid or free flat surfaces \cite{B61}, interaction between two internal eccentric spheres as in a spherical journal bearing \cite{J15}, or elastic media having two spherical cavities \cite{SS52}. Here, we review relevant studies on analytical solutions for two spherical particles, both rigid and fluid, interacting through an unbounded, quiescent, viscous fluid.
 
-The interaction of two spheres rotating around their line of centers has been investigated by \citet{J15}. \citet{SJ26} considered a system with the pair of particles translating in the same direction along their line of centers, i.e.\ following each other. In turn, \citet{M61} developed a solution of the Stokes equation, for two rigid spheres either approaching or retreating along the line of centers. \citet{B61} derived the same force representation for a sphere approaching a \textit{free} plane surface. He also showed that omission of inertial terms from N--S equations, i.e.\ Stokes regime, counterintuitively leads to having the same magnitude in force whether the sphere moves towards or away from the plane.
+The interaction of two spheres rotating around their line of centers has been investigated by \cite{J15}. \cite{SJ26} considered a system with the pair of particles translating in the same direction along their line of centers, i.e.\ following each other. In turn, \cite{M61} developed a solution of the Stokes equation, for two rigid spheres either approaching or retreating along the line of centers. \cite{B61} derived the same force representation for a sphere approaching a \textit{free} plane surface. He also showed that omission of inertial terms from N--S equations, i.e.\ Stokes regime, counterintuitively leads to having the same magnitude in force whether the sphere moves towards or away from the plane.
 
-\citet{GCB66} solved the symmetrical (flow around two equal-sized spheres) coupled problem of a pair of particles moving in the same direction and rotating with opposite angular velocities around central axes perpendicular to their line of centers. \citet{ON69} found solutions to two problems with boundary conditions complementary to that of \citet{GCB66}, namely a pair of spheres translating in opposite directions and rotating with the same angular velocities about axes perpendicular to the line connecting their centers. These solutions require solving a system of equations for a series of decaying recurrent coefficients. \citet{ONM70} generalized this solution to the case of the asymmetric configuration with unequal-sized particles. These studies provide an exact representation of interaction between two \textit{rigid} spheres in a viscous fluid. 
+\cite{GCB66} solved the symmetrical (flow around two equal-sized spheres) coupled problem of a pair of particles moving in the same direction and rotating with opposite angular velocities around central axes perpendicular to their line of centers. \cite{ON69} found solutions to two problems with boundary conditions complementary to that of \cite{GCB66}, namely a pair of spheres translating in opposite directions and rotating with the same angular velocities about axes perpendicular to the line connecting their centers. These solutions require solving a system of equations for a series of decaying recurrent coefficients. \cite{ONM70} generalized this solution to the case of the asymmetric configuration with unequal-sized particles. These studies provide an exact representation of interaction between two \textit{rigid} spheres in a viscous fluid. 
 
-By solving the Stokes flow inside the spherical particles, \citet{WW72} developed exact solutions for two identical liquid spheres following each other. They also showed that their solution in the limit of very large viscosity ratios approaches the  solution by \citet{SJ26}. This is the case of an extremely viscous internal circulation compared to the external flow. \citet{HHS73} generalized the solution to two fluid drops with different sizes and viscosities moving with any orientation along their line of centers. \citet{Z80} derived the solution for two fluid drops translating normal to that line. These studies provide a complete description of the drag forces acting on a pair of \textit{fluid} spheres.
+By solving the Stokes flow inside the spherical particles, \cite{WW72} developed exact solutions for two identical liquid spheres following each other. They also showed that their solution in the limit of very large viscosity ratios approaches the  solution by \cite{SJ26}. This is the case of an extremely viscous internal circulation compared to the external flow. \cite{HHS73} generalized the solution to two fluid drops with different sizes and viscosities moving with any orientation along their line of centers. \cite{Z80} derived the solution for two fluid drops translating normal to that line. These studies provide a complete description of the drag forces acting on a pair of \textit{fluid} spheres.
 
-It has to be added that the studies mentioned above were carried out under the continuum assumption of the fluid, that is in the limit of zero Knudsen number. In the range of small Knudsen numbers, \citet{RM74} developed a solution for two rigid spheres translating along their line of centers by considering free slip boundary conditions on their surfaces. Their solution approaches those of \citet{WW72} or \citet{HHS73} in the limit of low viscosity ratio. \citet{G96} and recently \citet{RSD22} developed solutions for a pair of fluid drops having free-slip boundary conditions and moving along their line of centers. Their solutions in the limit approach those derived by \citet{RM74} as well as \citet{HHS73}. These continuum--slip force representations are valid only for small Knudsen numbers, namely $Kn < 0.1$.
+It has to be added that the studies mentioned above were carried out under the continuum assumption of the fluid, that is in the limit of zero Knudsen number. In the range of small Knudsen numbers, \cite{RM74} developed a solution for two rigid spheres translating along their line of centers by considering free slip boundary conditions on their surfaces. Their solution approaches those of \cite{WW72} or \cite{HHS73} in the limit of low viscosity ratio. \cite{G96} and recently \cite{RSD22} developed solutions for a pair of fluid drops having free-slip boundary conditions and moving along their line of centers. Their solutions in the limit approach those derived by \cite{RM74} as well as \cite{HHS73}. These continuum--slip force representations are valid only for small Knudsen numbers, namely $Kn < 0.1$.
+
+\paragraph{Recovering \cite{M61} results from \cite{SJ26}}
+\cite{SJ26} developed \textit{explicit} formulae to evaluate forces acting on a pair of spheres moving with the same orientation along their line of centers. An \textit{implicit} alternative is to numerically solve the system of equations (26) therein. Doing so allows us to change the boundary condition and solve the complementary problem of spheres with an opposing orientation, for which \cite{M61} developed an explicit set of analytical formulation. This is simply done by changing the boundary condition for the second sphere $\beta$: using $-V$ instead of $V$ in the factor (25) of the second and fourth lines of (26). The same is valid for other studies that provide the system of equations, such as \cite{HHS73} whose solution can be calculated either implicitly by solving the system of equations given in Appendix B therein, or explicitly by using the functions given in Appendix C therein.
+
+\paragraph{Reciprocal identities in \cite{ONM70} and \cite{D69} solutions}
+In these two studies, analytical solutions are developed for the motion of an unequal pair normal to their line of centers. They decompose the general problem into sixteen sub-problems and find the overall interaction for any arbitrary case by superposing the corresponding solutions. Table 1 in both studies present such results. Some of these sub-solutions are interrelated \cite[using the notation in][]{ONM70} as follows:
+\begin{align}
+k f_{22}(k, \epsilon) &= f_{22}(k^{-1}, \epsilon k^{-1}),\\
+k^3 g_{12}(k, \epsilon) &= g_{12}(k^{-1}, \epsilon k^{-1}),\\
+3 f_{11}(k, \epsilon) &= 4 g_{21}(k, \epsilon),\\
+3 f_{11}(k^{-1}, \epsilon k^{-1}) &= 4 g_{21}(k^{-1}, \epsilon k^{-1}),\\
+3k^2 f_{12}(k, \epsilon) &= 4 g_{22}(k^{-1}, \epsilon k^{-1}),\\
+3 f_{12}(k^{-1}, \epsilon k^{-1}) &= 4k^2 g_{22}(k, \epsilon),
+\end{align}
+in which $k=\tfrac{a_2}{a_1}(=\lambda)$ and $\epsilon=\tfrac{h}{a_1}$.
 
 
 
 \subsection{List of misprints}%misprints_misprints_misprints_misprints_misprints
-Rigorous numerical test were conducted to compare the force and torque representation from twin multipole expansion method by \citet{JO84} with the solutions developed in bispherical coordinates. The comparison, showed us some of the potential misprints in all these studies, some of which already reported by others. Table~\ref{tab:misprints} lists these misprints.
+Rigorous numerical test were conducted to compare the force and torque representation from twin multipole expansion method by \cite{JO84} with the solutions developed in bispherical coordinates. The comparison, showed us some of the potential misprints in all these studies, some of which already reported by others. Table~\ref{tab:misprints} lists these misprints.
 
 
 
 \subsection{Tables of collision efficiency\label{sec:E12}}
 
-In this section, the three Tables \ref{tab:E10}, \ref{tab:E20}, and \ref{tab:E30} provide the results of simulations performed in this study. The same values are plotted in Figure~\ref{fig:E12}.
+The three Tables \ref{tab:E10}, \ref{tab:E20}, and \ref{tab:E30} provide the results of simulations performed to compute the collision efficiency of a pair of droplets settling under gravity. The same values are plotted in Figure~\ref{fig:E12}.
 
 
 
@@ -35,9 +87,9 @@ In this section, the three Tables \ref{tab:E10}, \ref{tab:E20}, and \ref{tab:E30
 \begin{longtable}{p{3cm}p{3cm}p{5.0cm}p{5.25cm}p{5.5cm}}
  \hline
  Study & Equation & Misprinted form & Corrected form & Description \\ \hline
- \citet{SJ26} & (37) & $\frac{2}{3}$ & $\frac{4}{3}$ & \cite{HB83,M61}.\\ \hline
+ \cite{SJ26} & (37) & $\frac{2}{3}$ & $\frac{4}{3}$ & \cite{HB83,M61}.\\ \hline
  
- \citet{M61} & $F_1$ \& $F_2$ & $(A_n \mp B_n + C_n \mp D_n)$ & $(A_n' \pm B_n' + C_n' \pm D_n')$ & \multirow[t]{7}{5.5cm}{\citet{GMS20} provided the correct form. Also, computational tests based on cross-comparison of the factors with their counterparts in \citet{SJ26}.} \\ \cline{2-4}
+ \cite{M61} & $F_1$ \& $F_2$ & $(A_n \mp B_n + C_n \mp D_n)$ & $(A_n' \pm B_n' + C_n' \pm D_n')$ & \multirow[t]{7}{5.5cm}{\cite{GMS20} provided the correct form. Also, computational tests based on cross-comparison of the factors with their counterparts in \cite{SJ26}.} \\ \cline{2-4}
  & $\Delta B_n'$ & $\big[-4\exp\left(n+\tfrac{1}{2}\right)\left(\alpha-\beta\right)$ & $\big[-4\exp\left\{-\left(n+\tfrac{1}{2}\right)\left(\alpha-\beta\right)\right\}$ & \\ 
  & & $\cdots+\cdots\cosh\left(\alpha-\beta\right)\big]$ & $\cdots+\cdots\cosh\left(\alpha+\beta\right)\big]$ & \\ \cline{2-4}
  & $\Delta C_n'$ & $\big[\cdots\sinh\left(n+\tfrac{3}{2}\right)\left(\alpha-\beta\right)$ & $\big[\cdots\sinh\left(n+\tfrac{3}{2}\right)\left(\alpha+\beta\right)$ & \\ 
@@ -46,12 +98,10 @@ In this section, the three Tables \ref{tab:E10}, \ref{tab:E20}, and \ref{tab:E30
  & $\Delta D_n'$ & $\big[\cdots\sinh\left(n+\tfrac{1}{2}\right)\left(\alpha+\beta\right) \cdots \big]$ & $\big[\cdots\sinh\left(n+\tfrac{1}{2}\right)\left(\alpha-\beta\right) \cdots \big]$ &
   \\ \hline
   
- \citet{ONM70} & (5.10) & $\sinh^2|\beta|$ & $\sinh^3|\beta|$ & Torque: $G_\Omega \propto b^3$.
+ \cite{ONM70} & (5.10) & $\sinh^2|\beta|$ & $\sinh^3|\beta|$ & Torque: $G_\Omega \propto b^3$.
  \\ \hline
  
- \citet{WW72} & (2.46): last factor & $\left(2n-1\right)$ & $\left(2n+1\right)$ & \footnote{For very large viscosity ratios the solution for a fluid drop ($\sigma\to\infty$ in \cite{WW72}) approaches that of a rigid particle ($\lambda$ in \cite{SJ26}). A careful comparison at this limit shows the factor is misprinted.}\cite{SJ26}; computational tests compared with Table 1 in \cite{WW72}.
- \\ \hline
- \citet{ONM70} & (5.10) & $\sinh^2|\beta|$ & $\sinh^3|\beta|$ & Torque: $G_\Omega \propto b^3$.
+ \cite{WW72} & (2.46): last factor & $\left(2n-1\right)$ & $\left(2n+1\right)$ & \footnote{For very large viscosity ratios the solution for a fluid drop ($\sigma\to\infty$ in \cite{WW72}) approaches that of a rigid particle ($\lambda$ in \cite{SJ26}). A careful comparison at this limit shows the factor is misprinted.}\cite{SJ26}; computational tests compared with Table 1 in \cite{WW72}.
  \\ \hline
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -61,22 +111,22 @@ In this section, the three Tables \ref{tab:E10}, \ref{tab:E20}, and \ref{tab:E30
  form & Description \\ \hline					 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
- \multirow[t]{3}{3cm}{\citet{HHS73}} & $[32]$ \& $[33]$ & $c$ & $c^2$ & \citet{Z82}; note: \mbox{$c=a\sinh(\alpha)$}.
+ \multirow[t]{3}{3cm}{\cite{HHS73}} & $[32]$ \& $[33]$ & $c$ & $c^2$ & \cite{Z82}; note: \mbox{$c=a\sinh(\alpha)$}.
  \\ \cline{2-5}
- & $[$C-7$]$ & $\delta_3=2(2n+1)^2$ & $\delta_3=-2(2n+1)^2$ & \citet{Z82}.
+ & $[$C-7$]$ & $\delta_3=2(2n+1)^2$ & $\delta_3=-2(2n+1)^2$ & \cite{Z82}.
  \\ \cline{2-5}
  & $[$B-8$]$ & $-C_n^\alpha e^{(n+3/2)\alpha}$ & $+C_n^\alpha e^{-(n+3/2)\alpha}$ & Cross-comparison of the systems of equations in \cite{WW72} -- third line of (2.30) -- and in \cite{HHS73}; computational tests.
  \\ \hline
  
- \citet{RM74} & (20): last line & $\mp n(n+1)$ & $\pm n(n+1)$ & Cross-comparison with (26) in \citet{SJ26}.
+ \cite{RM74} & (20): last line & $\mp n(n+1)$ & $\pm n(n+1)$ & Cross-comparison with (26) in \cite{SJ26}.
  \\ \hline
  
- \citet{BRI78} & $[1]$: last line & $\Big\{\cdots-(2n-1)\sinh2\alpha]\Big\}$ & $\Big\{\cdots-(2n+1)\sinh2\alpha]\Big\}$ & Section III.C in \cite{DSR89}, Section 9.4.3 in \cite{KK13}, and $[$B-12$]$ in \cite{HHS73}.
+ \cite{BRI78} & $[1]$: last line & $\Big\{\cdots-(2n-1)\sinh2\alpha]\Big\}$ & $\Big\{\cdots-(2n+1)\sinh2\alpha]\Big\}$ & Section III.C in \cite{DSR89}, Section 9.4.3 in \cite{KK13}, and $[$B-12$]$ in \cite{HHS73}.
  \\ \cline{2-4}
  & $[3]$ & $K_n=\frac{(n+1)}{(2n+2)(2n-1)}$ & $K_n=\frac{n(n+1)}{(2n+3)(2n-1)}$ &
  \\ \hline
  
- \citet{KK13} & (9.39): $N_1^{(n)}$ & $-2(2n+1)\sinh2\alpha$ & $+2(2n+1)\sinh2\alpha$ & \footnote{For very large viscosity ratios the solution for a fluid drop ($\lambda\to\infty$ in \cite{KK13}) approaches that of a rigid particle ($\lambda_2$ in \cite{M61}). A careful comparison at this limit shows the factor is misprinted.}\cite{M61}; computational tests compared with \cite{HHS73} and \cite{BRI78}.
+ \cite{KK13} & (9.39): $N_1^{(n)}$ & $-2(2n+1)\sinh2\alpha$ & $+2(2n+1)\sinh2\alpha$ & \footnote{For very large viscosity ratios the solution for a fluid drop ($\lambda\to\infty$ in \cite{KK13}) approaches that of a rigid particle ($\lambda_2$ in \cite{M61}). A careful comparison at this limit shows the factor is misprinted.}\cite{M61}; computational tests compared with \cite{HHS73} and \cite{BRI78}.
  \\ \hline
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -86,20 +136,20 @@ In this section, the three Tables \ref{tab:E10}, \ref{tab:E20}, and \ref{tab:E30
  form & Description \\ \hline					 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
- \multirow[t]{7}{3cm}{\citet{JO84}} & (4.9) & $P_{s(q-s)(p-n+1)}$ & $P_{s(q-s)(p-n-1)}$ & \citep{RWMG11,T17,I}.
+ \multirow[t]{7}{3cm}{\cite{JO84}} & (4.9) & $P_{s(q-s)(p-n+1)}$ & $P_{s(q-s)(p-n-1)}$ & \cite{RWMG11,T17,I}.
  \\ \cline{2-5}
- & (6.12) & $f_{2j}$ & $f_{2k}$ & \multirow[c]{2}{5.5cm}{\citet{I}.}
+ & (6.12) & $f_{2j}$ & $f_{2k}$ & \multirow[c]{2}{5.5cm}{\cite{I}.}
  \\ \cline{2-4}
  & (6.13) & $\Big\{\cdots\frac{\lambda^2}{1+\lambda}\Big\}$ & $\underbrace{-\tfrac{16\lambda^2}{(1+\lambda)^4}}_\text{missing term}\cdots\Big\{\cdots\underbrace{\tfrac{\lambda^2}{4(1+\lambda)}}_\text{correction}\Big\}$ & 
  \\ \cline{2-5}
-  & (7.10): $g_4$ & $\frac{4}{5}\frac{\lambda^2}{(1+\lambda)^4}$ & $\frac{\lambda^2}{10(1+\lambda)}$ & Table 11.5 in \citet{KK13}.
+  & (7.10): $g_4$ & $\frac{4}{5}\frac{\lambda^2}{(1+\lambda)^4}$ & $\frac{\lambda^2}{10(1+\lambda)}$ & Table 11.5 in \cite{KK13}.
  \\ \cline{2-5}
- & \multirow[t]{3}{3cm}{(7.10): $g_5$} & \multirow[t]{3}{5.25cm}{$\frac{4}{125}\frac{\lambda(43-24\lambda+43\lambda^2)}{(1+\lambda)^4}$} & \cite{KK13}: $\frac{1}{250}\frac{\lambda(43-24\lambda+43\lambda^2)}{(1+\lambda)}$ & \multirow[t]{3}{5.5cm}{Computational tests show \citet{I} suggestion better approximates $g_{11}$ \& $g_{12}$ of \citet{ONM70}.} \\
+ & \multirow[t]{3}{3cm}{(7.10): $g_5$} & \multirow[t]{3}{5.25cm}{$\frac{4}{125}\frac{\lambda(43-24\lambda+43\lambda^2)}{(1+\lambda)^4}$} & \cite{KK13}: $\frac{1}{250}\frac{\lambda(43-24\lambda+43\lambda^2)}{(1+\lambda)}$ & \multirow[t]{3}{5.5cm}{Computational tests show \cite{I} suggestion better approximates $g_{11}$ \& $g_{12}$ of \cite{ONM70}.} \\
  & & & \cite{L90}: $\frac{2}{125}\frac{\lambda(43-24\lambda+43\lambda^2)}{(1+\lambda)^4}$ & \\
  & & & \cite{I}: $\frac{1}{125}\frac{\lambda(43-24\lambda+43\lambda^2)}{(1+\lambda)^4}$ & 
  \\ \hline
  
- \citet{GMS20} & (60) & $\frac{n+1}{2n+3}$ & $\frac{n+2}{2n+3}$ & Printed correctly in (C35) therein \cite{GMS20}. Also, (3.45) in \cite{GCB66}.
+ \cite{GMS20} & (60) & $\frac{n+1}{2n+3}$ & $\frac{n+2}{2n+3}$ & Printed correctly in (C35). Also, (3.45) in \cite{GCB66}.
  \\ \hline
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -109,7 +159,7 @@ In this section, the three Tables \ref{tab:E10}, \ref{tab:E20}, and \ref{tab:E30
  form & Description \\ \hline					 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
  
- \multirow[t]{6}{3cm}{\citet{RSD22}} & (A.11) & $e^{\frac{-(n+3/2)\eta_1}{2n+3}}-e^{\frac{-(n-1/2)\eta_1}{2n-1}}$ & $\frac{e^{-(n+3/2)\eta_1}}{2n+3}-\frac{e^{-(n-1/2)\eta_1}}{2n-1}$ & \multirow[c]{2}{5.5cm}{Printed correctly in \cite{R09}.}
+ \multirow[t]{6}{3cm}{\cite{RSD22}} & (A.11) & $e^{\frac{-(n+3/2)\eta_1}{2n+3}}-e^{\frac{-(n-1/2)\eta_1}{2n-1}}$ & $\frac{e^{-(n+3/2)\eta_1}}{2n+3}-\frac{e^{-(n-1/2)\eta_1}}{2n-1}$ & \multirow[c]{2}{5.5cm}{Printed correctly in \cite{R09}.}
  \\ \cline{2-4}
  & (A.12) & $e^{\frac{-(n+3/2)\eta_2}{2n+3}}-e^{\frac{-(n-1/2)\eta_2}{2n-1}}$ & $\frac{e^{(n+3/2)\eta_2}}{2n+3}-\frac{e^{(n-1/2)\eta_2}}{2n-1}$ & 
  \\ \cline{2-5}
